@@ -4,8 +4,17 @@
     box-sizing: border-box;
 }
 
+body {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
 p {
     margin-left: 1.66%;
+    margin-right: 68.34%;
+    padding-right: 0%;
     width: 30%;
     padding-bottom: 15px;
     border-bottom: 1px solid gray;
@@ -16,7 +25,7 @@ p {
 }
 
 img {
-    float: left;
+    /* float: left; */
     width: 30%;
     margin: 1.66%;
 }
