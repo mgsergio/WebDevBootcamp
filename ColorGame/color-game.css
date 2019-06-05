@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    margin: 0 auto;
+    background: pink;
+}
+
+.level {
+    display: flex;
+    justify-content: space-between;
+}
+
+.display {
+    background: blue;
+    color: white;
+}
+
+#easy {
+    margin-right: 10px;
+}
+
+#header nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: white;
+    color: blue;
+}
+
+#main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    min-height: 100%;
+    background: black;
+}
+
+.tile {
+    width: 150px;
+    height: 150px;
+    margin: 5px;
+    background: red;
+}
