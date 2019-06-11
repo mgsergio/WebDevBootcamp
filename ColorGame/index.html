@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="App">
 
 <head>
     <meta charset="UTF-8">
@@ -11,32 +11,36 @@
     <title>Color game</title>
 </head>
 
-<body>
+<body class=App-Body>
 
-    <section id="header">
-        <div class="display">
-            <p>the great</p>
-            <p>rgb(211, 206, 13)</p>
-            <p>guessing game</p>
+    <div class="Header">
+        <div class="Display">
+            <p class="Display-Text">the great</p>
+            <p class="Display-Color">rgb(211, 206, 13)</p>
+            <p class="Display-Text">guessing game</p>
         </div>
 
-        <nav>
-            <div>new colors</div>
-            <div class="level">
-                <div id="easy">easy</div>
-                <div id="hard">hard</div>
+        <nav class="Controls">
+            <div class="Controls-Container">
+                <a class="Controls-Item">new colors</a>
+                <div class="Controls-Level">
+                    <a class="Controls-Item">easy</a>
+                    <a class="Controls-Item Controls-Item_active">hard</a>
+                </div>
             </div>
         </nav>
-    </section>
+    </div>
 
-    <section id="main">
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-        <div class="tile"></div>
-    </section>
+    <div class="ColorGrid">
+        <div class="ColorGrid-Container">
+            <div class="ColorGrid-Tile"></div>
+            <div class="ColorGrid-Tile"></div>
+            <div class="ColorGrid-Tile"></div>
+            <div class="ColorGrid-Tile"></div>
+            <div class="ColorGrid-Tile"></div>
+            <div class="ColorGrid-Tile"></div>
+        </div>
+    </div>
 
 </body>
 
