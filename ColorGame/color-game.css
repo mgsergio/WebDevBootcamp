@@ -79,7 +79,6 @@
 }
 
 .ColorGrid-Tile {
-    background: greenyellow;
     /* border-radius: 50% 20% / 10% 40%; */
     /* border-radius: 10px 100px / 120px; */
     /* border-radius: 10% 30% 50% 70%; */
@@ -88,4 +87,10 @@
     margin: 10px;
     height: 100px;
     flex-basis: 110px;
+    cursor: pointer;
+}
+
+.ColorGrid-Tile_hidden {
+    cursor: default;
+    pointer-events: none;
 }

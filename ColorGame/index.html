@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <link rel="stylesheet" href="color-game.css">
+    <script type="text/javascript" src="color-game.js"></script>
 
     <title>Color game</title>
 </head>
@@ -22,16 +23,37 @@
 
         <nav class="Controls">
             <div class="Controls-Container">
-                <a class="Controls-Item">new colors</a>
+                <a class="Controls-Item Controls-Item_new_game">new colors</a>
                 <div class="Controls-Level">
-                    <a class="Controls-Item">easy</a>
-                    <a class="Controls-Item Controls-Item_active">hard</a>
+                    <a class="Controls-Item Controls-Item_easy">easy</a>
+                    <a class="Controls-Item Controls-Item_hard Controls-Item_active">hard</a>
                 </div>
             </div>
         </nav>
     </div>
 
-    <div class="ColorGrid">
+    <script type="text/javascript">
+        // let colors = [
+        //     "white",
+        //     "green",
+        //     "yellow",
+        //     "gray",
+        //     "red",
+        //     "blue"
+        // ];
+        // document.gameBoard = new ColorGrid();
+        // document.gameBoard.setColors(colors);
+        // document.gameBoard.draw(document.body);
+        // document.gameBoard.onTileClicked(function (color, tile) {
+        //     alert(`${color.toUpperCase()} tile clicked`);
+        //     document.gameBoard.hideTile(tile);
+        // });
+        document.game = new ColorGame();
+        document.controls = new GameControls(document.game);
+        document.controls.newGame(Level.HARD);
+    </script>
+
+    <!-- <div class="ColorGrid">
         <div class="ColorGrid-Container">
             <div class="ColorGrid-Tile"></div>
             <div class="ColorGrid-Tile"></div>
@@ -40,7 +62,7 @@
             <div class="ColorGrid-Tile"></div>
             <div class="ColorGrid-Tile"></div>
         </div>
-    </div>
+    </div> -->
 
 </body>
 
