@@ -17,6 +17,7 @@
     padding-top: 0.6rem;
     padding-bottom: 0.6rem;
     font-family: sans-serif;
+    transition: background 1.0s;
 }
 
 .Display-Text {
@@ -96,6 +97,7 @@
     padding-top: 25%;
     flex-basis: 25%;
     cursor: pointer;
+    transition: background 1.0s;
 }
 
 .ColorGrid-Tile_hidden {
