@@ -40,6 +40,8 @@
 .Controls-Container {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    align-content: center;
     width: 400px;
 }
 
@@ -59,6 +61,16 @@
 .Controls-Item_active {
     color: white;
     background: blue;
+}
+
+/* TODO: This element is not centered vertically.
+   Looks like I wrongly use align-content and align-items
+   and/or do not understand something else.
+ */
+.Controls-Message {
+    color: black;
+    font-size: 0.8rem;
+    opacity: 0.7;
 }
 
 .ColorGrid {
@@ -84,9 +96,9 @@
     /* border-radius: 10% 30% 50% 70%; */
     border-radius: 25% 10%;
     /* border-radius: 20% 20% 20% 20%; */
-    margin: 10px;
-    height: 100px;
-    flex-basis: 110px;
+    margin: 2.5% 1%;
+    padding-top: 25%;
+    flex-basis: 25%;
     cursor: pointer;
 }
 
