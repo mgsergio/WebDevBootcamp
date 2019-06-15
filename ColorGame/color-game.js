@@ -120,6 +120,7 @@ class ColorGame {
     }
 
     gameOver(success) {
+        this.board.ignoreClicks();
         alert(success ? "Congrats!" : "Sorry, try again.");
     }
 }
@@ -147,12 +148,14 @@ class GameControls {
         });
 
         let hard = document.querySelector(".Controls-Item_hard");
-        newColors.addEventListener('click', function () {
+        hard.addEventListener('click', function () {
             self.newGame(Level.HARD);
         });
     }
 
     newGame(level) {
+        console.log("New game with level", level);
+
         let easy = document.querySelector(".Controls-Item_easy");
         let hard = document.querySelector(".Controls-Item_hard");
         if (level === Level.EASY) {
@@ -215,11 +218,20 @@ class ColorGrid {
     }
 
     onTileClicked(foo) {
+        this.tileClickedFoo =  function (e) {
+            foo(e.target.style.background, e.target);
+        };
+
         let tiles = document.querySelectorAll(".ColorGrid-Tile");
         for (let i = 0; i < tiles.length; ++i) {
-            tiles[i].addEventListener("click", function (e) {
-                foo(e.target.style.background, e.target);
-            });
+            tiles[i].addEventListener("click", this.tileClickedFoo);
+        }
+    }
+
+    ignoreClicks() {
+        let tiles = document.querySelectorAll(".ColorGrid-Tile");
+        for (let i = 0; i < tiles.length; ++i) {
+            tiles[i].removeEventListener("click", this.tileClickedFoo);
         }
     }
 }
