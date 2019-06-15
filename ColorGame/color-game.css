@@ -33,6 +33,7 @@
 .Controls {
     background: white;
     color: blue;
+    height: 25px;
     display: flex;
     justify-content: center;
 }
@@ -41,7 +42,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    align-content: center;
     width: 400px;
 }
 
@@ -63,10 +63,6 @@
     background: blue;
 }
 
-/* TODO: This element is not centered vertically.
-   Looks like I wrongly use align-content and align-items
-   and/or do not understand something else.
- */
 .Controls-Message {
     color: black;
     font-size: 0.8rem;
