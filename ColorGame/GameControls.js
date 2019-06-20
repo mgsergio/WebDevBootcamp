@@ -1,38 +1,31 @@
 class GameControls {
     constructor(game) {
         this.game = game
-        let self = this;
 
-        this.game.onWrongPick(this.echo.bind(this, "Try again"));
-        this.game.onGameOver(function (success) {
+        this.game.onWrongPick(() => this.echo("Try again"));
+        this.game.onGameOver(success => {
             if (success) {
-                self.echo("Congratulations!");
+                this.echo("Congratulations!");
             } else {
-                self.echo("Maybe next time...");
+                this.echo("Maybe next time...");
             }
         });
 
-        let newColors = document.querySelector(".Controls-Item_new_game");
-        newColors.addEventListener('click', function () {
-            self.newGame(self.getLevel());
-        });
+        const newColors = document.querySelector(".Controls-Item_new_game");
+        newColors.addEventListener('click', ()  => this.newGame(this.getLevel()));
 
-        let easy = document.querySelector(".Controls-Item_easy");
-        easy.addEventListener('click', function () {
-            self.newGame(Level.EASY);
-        });
+        const easy = document.querySelector(".Controls-Item_easy");
+        easy.addEventListener('click', () => this.newGame(Level.EASY));
 
-        let hard = document.querySelector(".Controls-Item_hard");
-        hard.addEventListener('click', function () {
-            self.newGame(Level.HARD);
-        });
+        const hard = document.querySelector(".Controls-Item_hard");
+        hard.addEventListener('click', () => this.newGame(Level.HARD));
     }
 
     newGame(level) {
         console.log("New game with level", level);
 
-        let easy = document.querySelector(".Controls-Item_easy");
-        let hard = document.querySelector(".Controls-Item_hard");
+        const easy = document.querySelector(".Controls-Item_easy");
+        const hard = document.querySelector(".Controls-Item_hard");
         if (level === Level.EASY) {
             hard.classList.remove("Controls-Item_active");
             easy.classList.add("Controls-Item_active");
@@ -46,7 +39,7 @@ class GameControls {
     }
 
     getLevel() {
-        let selected = document.querySelector(".Controls-Item_active");
+        const selected = document.querySelector(".Controls-Item_active");
         if (selected.classList.contains("Controls-Item_hard")) {
             return Level.HARD;
         }
@@ -54,7 +47,7 @@ class GameControls {
     }
 
     echo(m) {
-        let echoArea = document.querySelector(".Controls-Message");
+        const echoArea = document.querySelector(".Controls-Message");
         echoArea.textContent = m;
     }
 }

@@ -23,7 +23,7 @@ class ColorGrid {
     }
 
     draw(parent) {
-        let tmpl = document.createElement("template");
+        const tmpl = document.createElement("template");
         tmpl.innerHTML = makeBoardMarkup(
             this.colors.map(x => x.toRGBString())
         ).trim();
@@ -33,7 +33,7 @@ class ColorGrid {
     }
 
     paintAll(color) {
-        let tiles = document.querySelectorAll(".ColorGrid-Tile");
+        const tiles = document.querySelectorAll(".ColorGrid-Tile");
         for (let i = 0; i < tiles.length; ++i) {
             if (tiles[i].classList.contains("ColorGrid-Tile_hidden")) {
                 continue
@@ -52,14 +52,14 @@ class ColorGrid {
             foo(e.target.style.background, e.target);
         };
 
-        let tiles = document.querySelectorAll(".ColorGrid-Tile");
+        const tiles = document.querySelectorAll(".ColorGrid-Tile");
         for (let i = 0; i < tiles.length; ++i) {
             tiles[i].addEventListener("click", this.tileClickedFoo);
         }
     }
 
     ignoreClicks() {
-        let tiles = document.querySelectorAll(".ColorGrid-Tile");
+        const tiles = document.querySelectorAll(".ColorGrid-Tile");
         for (let i = 0; i < tiles.length; ++i) {
             tiles[i].removeEventListener("click", this.tileClickedFoo);
         }
@@ -67,7 +67,7 @@ class ColorGrid {
 }
 
 function makeBoardMarkup(colors) {
-    let mkTile = x => `<div class="ColorGrid-Tile" style="background: ${x}"></div>`;
+    const mkTile = x => `<div class="ColorGrid-Tile" style="background: ${x}"></div>`;
     return `
         <div class="ColorGrid">
             <div class="ColorGrid-Container">

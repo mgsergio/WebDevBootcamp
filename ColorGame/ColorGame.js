@@ -1,8 +1,8 @@
 'use strict'
 
 const Level = {
-    EASY: 1,
-    HARD: 2,
+    EASY: Symbol('EASY'),
+    HARD: Symbol('HARD'),
 }
 
 class ColorGame {
@@ -36,7 +36,7 @@ class ColorGame {
     }
 
     generateColors(n) {
-        let colors = [];
+        const colors = [];
         for (let i = 0; i < n; ++i) {
             colors.push(Color.random());
         }
@@ -61,7 +61,7 @@ class ColorGame {
     }
 
     getColorsNumber() {
-        return this.level * 3;
+        return this.level === Level.EASY ? 3 : 6;
     }
 
     getMaxAttempts() {

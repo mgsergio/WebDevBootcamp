@@ -49,12 +49,16 @@
 .Controls-Level {
     display: flex;
     justify-content: space-between;
+    align-items: stretch;
+    align-self: stretch;
 }
 
 .Controls-Item {
+    display: flex;
     margin-right: 0.5rem;
     padding-left: 0.3rem;
     padding-right: 0.3rem;
+    align-items: center;
     text-transform: uppercase;
     cursor: pointer;
 }

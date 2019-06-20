@@ -1,14 +1,9 @@
 class Color {
     constructor() {
-        if (arguments.length === 1) {
-            this.r = arguments[0][0];
-            this.g = arguments[0][1];
-            this.b = arguments[0][2];
-        } else {
-            this.r = arguments[0];
-            this.g = arguments[1];
-            this.b = arguments[2];
-        }
+        const [r, g, b] = arguments.length === 1
+            ? Array.from(arguments[0])
+            : Array.from(arguments);
+        Object.assign(this, { r, g, b });
     }
 
     static random() {
