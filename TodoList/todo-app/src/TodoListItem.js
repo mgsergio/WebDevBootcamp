@@ -28,7 +28,10 @@ export class TodoListItem extends React.Component {
       : "TodoList-ItemTrash_hidden";
 
     return (
-      <div className={`TodoList-ItemTrash ${classModifier}`} >
+      <div
+        className={`TodoList-ItemTrash ${classModifier}`}
+        onClick={this.props.onTrashClick}
+      >
         <FontAwesomeIcon icon={faTrashAlt} />
       </div>
     );
@@ -41,7 +44,7 @@ export class TodoListItem extends React.Component {
     return (
       <div
         className={`TodoList-ItemTask ${classEven} ${classDone}`.trim()}
-        onClick={this.props.onClick}
+        onClick={this.props.onTextClick}
       >
         {this.props.task}
       </div>
