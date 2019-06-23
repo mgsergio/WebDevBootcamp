@@ -1,0 +1,27 @@
+.TodoList-Header {
+  display: flex;
+  flex-direction: column;
+  background: blue;
+}
+
+.TodoList-Bar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TodoList-Logo {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.TodoList-Plus {
+  margin-right: 15px;
+}
+
+.TodoList-Input {
+  height: 32px;
+  padding-left: 15px;
+}
