@@ -1,0 +1,82 @@
+.App {
+  background: rgb(0,22,36);
+  background: linear-gradient(270deg, rgba(0,22,36,1) 0%, rgba(121,119,9,0.9458158263305322) 0%, rgba(0,212,255,1) 89%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  text-align: center;
+}
+
+.TodoList {
+  width: 300px;
+}
+
+.TodoList-Header {
+  display: flex;
+  flex-direction: column;
+  background: blue;
+}
+
+.TodoList-Bar {
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.TodoList-Logo {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-left: 15px;
+}
+
+.TodoList-Plus {
+  margin-right: 15px;
+}
+
+.TodoList-Input {
+  height: 32px;
+  padding-left: 15px;
+}
+
+.TodoList-Item {
+  display: flex;
+  height: 30px;
+}
+
+.TodoList-ItemTrash {
+  display: flex;
+  /* display: none; */
+  width: 30px;
+  justify-content: center;
+  align-items: center;
+  background: red;
+}
+
+.TodoList-ItemTrash_hidden {
+  display: none;
+}
+
+.TodoList-ItemTask {
+  display: flex;
+  justify-content: flex-start;
+  padding-left: 15px;
+  align-items: center;
+  flex-grow: 1;
+  background: white;
+  color: black;
+  /* text-align: center; */
+  /* vertical-align: center; */
+}
+
+.TodoList-ItemTask_even {
+  background: gray;
+}
+
+.TodoList-ItemTask_done {
+  text-decoration: line-through;
+}
