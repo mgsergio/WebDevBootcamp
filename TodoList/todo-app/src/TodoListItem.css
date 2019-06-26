@@ -6,14 +6,20 @@
 .TodoList-ItemTrash {
   display: flex;
   /* display: none; */
-  width: 30px;
   justify-content: center;
   align-items: center;
   background: red;
 }
 
+.TodoList-ItemTrash_shown {
+  width: 30px;
+  transition: all 1s;
+}
+
 .TodoList-ItemTrash_hidden {
-  display: none;
+  width: 0;
+  transition: all 1s;
+  visibility: hidden;
 }
 
 .TodoList-ItemTask {

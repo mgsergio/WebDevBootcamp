@@ -15,7 +15,7 @@ export class TodoListHeader extends React.Component {
   }
 
   handleKeyPress(e) {
-    if (e.key == "Enter" && e.target.value.length != 0) {
+    if (e.key === "Enter" && e.target.value.length !== 0) {
       this.props.onEnterPress(e.target.value);
       e.target.value = "";
     }

@@ -23,6 +23,8 @@ export class TodoListItem extends React.Component {
   }
 
   renderTrash() {
+    // TODO: Make transition from unmounted state:
+    // i.e. unmount -> mount_hidden, mount_shown
     const classModifier = this.state.hovered
       ? "TodoList-ItemTrash_shown"
       : "TodoList-ItemTrash_hidden";
@@ -32,7 +34,9 @@ export class TodoListItem extends React.Component {
         className={`TodoList-ItemTrash ${classModifier}`}
         onClick={this.props.onTrashClick}
       >
-        <FontAwesomeIcon icon={faTrashAlt} />
+        <FontAwesomeIcon
+          icon={faTrashAlt}
+          style={{ width: "40%" }} />
       </div>
     );
   }
